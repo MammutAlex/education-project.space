@@ -54,22 +54,20 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="dropdown active">
-                    <a href="#">Головна</a>
+                    <a href="{{route('index')}}">Головна</a>
                 </li>
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Напрямки <i class="fa fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Діти</a></li>
-                        <li><a href="#">Школярі</a></li>
-                        <li><a href="#">Студенти</a></li>
-                        <li><a href="#">Аспіранти</a></li>
-                        <li><a href="#">Викладачі</a></li>
+                        <li><a href="{{route('direction',['direction'=>'test'])}}">Діти</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Блог</a></li>
-                <li><a href="#">Контакт</a></li>
+                <li><a href="{{route('blog')}}">Блог</a></li>
+                <li><a href="{{route('contact')}}">Контакт</a></li>
+                <li><a href="{{route('organizations')}}">Організації</a></li>
+                <li><a href="{{route('about')}}">Про нас</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->
@@ -136,9 +134,10 @@
             <div class="col-md-3 margin-b-30">
                 <h4>Сторінки</h4>
                 <ul class="list-unstyled link-list">
-                    <li><a href="#">Головна</a></li>
-                    <li><a href="#">Блог</a></li>
-                    <li><a href="#">Про нас</a></li>
+                    <li><a href="{{route('blog')}}">Блог</a></li>
+                    <li><a href="{{route('contact')}}">Контакт</a></li>
+                    <li><a href="{{route('organizations')}}">Організації</a></li>
+                    <li><a href="{{route('about')}}">Про нас</a></li>
                 </ul>
             </div><!--/col-->
             <div class="col-md-3 margin-b-30">
