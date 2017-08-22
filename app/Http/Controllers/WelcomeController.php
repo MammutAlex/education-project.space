@@ -15,4 +15,8 @@ class WelcomeController extends Controller
     {
         return view('coming-soon');
     }
+    public function direction()
+    {
+        return view('direction');
+    }
 }

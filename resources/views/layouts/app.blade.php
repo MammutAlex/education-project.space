@@ -162,15 +162,15 @@
 </footer>
 <!--/footer-->
 <!--Common plugins-->
-<script src="plugins/jquery/dist/jquery.min.js"></script>
-<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-<script src="plugins/pace/pace.min.js"></script>
-<script src="plugins/jasny-bootstrap/js/jasny-bootstrap.min.js"></script>
-<script src="plugins/owl-carousel/owl.carousel.min.js"></script>
-<script src="plugins/sticky/jquery.sticky.js"></script>
-<script src="plugins/icheck/icheck.min.js"></script>
-<script src="js/jquery.stellar.min.js"></script>
-<script src="js/boland.custom.js"></script>
+<script src="/plugins/jquery/dist/jquery.min.js"></script>
+<script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="/plugins/pace/pace.min.js"></script>
+<script src="/plugins/jasny-bootstrap/js/jasny-bootstrap.min.js"></script>
+<script src="/plugins/owl-carousel/owl.carousel.min.js"></script>
+<script src="/plugins/sticky/jquery.sticky.js"></script>
+<script src="/plugins/icheck/icheck.min.js"></script>
+<script src="/js/jquery.stellar.min.js"></script>
+<script src="/js/boland.custom.js"></script>
 <!--page template scripts-->
 @yield('script')
 </body>
