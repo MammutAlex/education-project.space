@@ -73,6 +73,7 @@
             theme: "white",
             displayCaptions: true,
             fontSize: 48,
+            lang: 'ua',
             captionSize: 14
         });
     });
