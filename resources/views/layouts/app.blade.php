@@ -53,21 +53,21 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="dropdown active">
+                <li class="{{isActiveRoute('index')}}">
                     <a href="{{route('index')}}">Головна</a>
                 </li>
 
-                <li class="dropdown">
+                <li class="dropdown {{isActiveRoute('direction')}}">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Напрямки <i class="fa fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="{{route('direction',['direction'=>'test'])}}">Діти</a></li>
                     </ul>
                 </li>
-                <li><a href="{{route('blog')}}">Блог</a></li>
-                <li><a href="{{route('contact')}}">Контакт</a></li>
-                <li><a href="{{route('organizations')}}">Організації</a></li>
-                <li><a href="{{route('about')}}">Про нас</a></li>
+                <li class="{{isActiveRoute('blog')}}"><a href="{{route('blog')}}">Блог</a></li>
+                <li class="{{isActiveRoute('contact')}}"><a href="{{route('contact')}}">Контакт</a></li>
+                <li class="{{isActiveRoute('organizations')}}"><a href="{{route('organizations')}}">Організації</a></li>
+                <li class="{{isActiveRoute('about')}}"><a href="{{route('about')}}">Про нас</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->
