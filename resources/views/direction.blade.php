@@ -4,7 +4,7 @@
     <!--page header-->
     <div class="page-breadcrumb margin-b-60">
         <div class="container">
-            <h4>Shop 4 columns</h4>
+            <h4>Школярі</h4>
         </div>
     </div>
     <!--page header-->
