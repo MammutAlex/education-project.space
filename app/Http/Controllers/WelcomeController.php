@@ -33,4 +33,8 @@ class WelcomeController extends Controller
     {
         return view('contact');
     }
+    public function organizations()
+    {
+        return view('organizations');
+    }
 }
