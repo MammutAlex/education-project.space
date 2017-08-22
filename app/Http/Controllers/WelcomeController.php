@@ -29,4 +29,8 @@ class WelcomeController extends Controller
     {
         return view('article');
     }
+    public function contact()
+    {
+        return view('contact');
+    }
 }
