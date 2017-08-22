@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('coming-soon');
-});
+Route::get('/', 'WelcomeController@coming')->name('coming');
+
+Route::get('/index', 'WelcomeController@index')->name('index');
 
 //Auth::routes();
 //
