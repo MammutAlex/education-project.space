@@ -17,55 +17,85 @@
         </div>
     </div>
     <div class="container">
-        <h3 class="text-uppercase font-400 title-font text-center margin-b-30">Напрямки</h3>
-        <div class="product-slider owl-carousel owl-theme">
-            <div class="item">
-                <a class="category-box" href="#">
-                    <img src="images/products/p2.jpg" alt="" class="img-responsive">
-                    <div class="category-text">
-                        <h4 class="text-uppercase">Діти</h4>
-                        <p>Lorem ipsum dolor</p>
+        <div class="row">
+            <div class="col-sm-4 margin-b-30">
+                <a class="image-box" href="blog.html">
+                    <img src="images/img-1.jpg" alt="" class="img-responsive">
+                    <div class="img-overlay">
+                        <h1>Latest news</h1>
                     </div>
-                </a><!--/category-box-->
-            </div><!--/item-->
-            <div class="item">
-                <a class="category-box" href="#">
-                    <img src="images/products/p4.jpg" alt="" class="img-responsive">
-                    <div class="category-text">
-                        <h4 class="text-uppercase">Школярі</h4>
-                        <p>Lorem ipsum dolor</p>
+                </a>
+            </div>
+            <div class="col-sm-4 margin-b-30">
+                <a class="image-box" href="about.html">
+                    <img src="images/img-3.jpg" alt="" class="img-responsive">
+                    <div class="img-overlay">
+                        <h1>Our Store</h1>
                     </div>
-                </a><!--/category-box-->
-            </div><!--/item-->
-            <div class="item">
-                <a class="category-box" href="#">
-                    <img src="images/products/p12.jpg" alt="" class="img-responsive">
-                    <div class="category-text">
-                        <h4 class="text-uppercase">Студенти</h4>
-                        <p>Lorem ipsum dolor</p>
+                </a>
+            </div>
+            <div class="col-sm-4 margin-b-30">
+                <a class="image-box" href="cat-grid-2col.html">
+                    <img src="images/img-2.jpg" alt="" class="img-responsive">
+                    <div class="img-overlay">
+                        <h1>Products</h1>
                     </div>
-                </a><!--/category-box-->
-            </div><!--/item-->
-            <div class="item">
-                <a class="category-box" href="#">
-                    <img src="images/products/p1.jpg" alt="" class="img-responsive">
-                    <div class="category-text">
-                        <h4 class="text-uppercase">Аспіранти</h4>
-                        <p>Lorem ipsum dolor</p>
-                    </div>
-                </a><!--/category-box-->
-            </div><!--/item-->
-            <div class="item">
-                <a class="category-box" href="#">
-                    <img src="images/products/p6.jpg" alt="" class="img-responsive">
-                    <div class="category-text">
-                        <h4 class="text-uppercase">Викладачі</h4>
-                        <p>Lorem ipsum dolor</p>
-                    </div>
-                </a><!--/category-box-->
-            </div><!--/item-->
+                </a>
+            </div>
         </div>
     </div>
+    <div class="space-80"></div>
+    <div class="testimonials">
+        <div class="testi-slider owl-carousel owl-theme">
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+                            <p>
+                                " It is a long established fact that a reader will be distracted by the readable content
+                                of a page when looking at its layout.
+                                "
+                            </p>
+                            <h4>Steven Smith
+                                <small>Boland customer</small>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div><!--item-->
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+                            <p>
+                                " There are many variations of passages of Lorem Ipsum available, but the majority have
+                                suffered alteration in some form "
+                            </p>
+                            <h4>John Doe
+                                <small>Boland customer</small>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div><!--item-->
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+                            <p>
+                                It is a long established fact that a reader will be distracted by the readable content
+                                of a page when looking at its layout.
+                            </p>
+                            <h4>Steven Smith
+                                <small>Boland customer</small>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div><!--item-->
+        </div>
+    </div><!--/testimonials-->
+    <div class="space-80"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-6 margin-b-30">
@@ -139,4 +169,27 @@
     </div>
 @endsection
 @section('script')
+    <!--page template scripts-->
+    <script src="plugins/masterslider/masterslider.min.js"></script>
+    <script>
+        (function ($) {
+            "use strict";
+            var slider = new MasterSlider();
+            // adds Arrows navigation control to the slider.
+
+            slider.control('timebar', {insertTo: '#masterslider'});
+            slider.control('bullets');
+
+            slider.setup('masterslider', {
+                width: 1170, // slider standard width
+                height: 510, // slider standard height
+                space: 0,
+                layout: 'fullwidth',
+                loop: true,
+                preload: 0,
+                instantStartLayers: true,
+                autoplay: true
+            });
+        })(jQuery);
+    </script>
 @endsection
