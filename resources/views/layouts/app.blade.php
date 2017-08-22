@@ -68,12 +68,8 @@
                         <li><a href="#">Викладачі</a></li>
                     </ul>
                 </li>
-                <!--mega menu-->
-                <li class="dropdown yamm-fw">
-                    <a href="#">Про нас</a>
-                </li> <!--menu Features li end here-->
                 <li><a href="#">Блог</a></li>
-
+                <li><a href="#">Контакт</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->
