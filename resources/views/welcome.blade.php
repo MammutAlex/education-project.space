@@ -68,7 +68,9 @@
                                     </h4>
                                 </a>
                                 <ul class="list-inline quick-meta">
-                                    {{$calendar->description}}
+                                    <li>
+                                        {{$calendar->description}}
+                                    </li>
                                 </ul>
                             </div>
                         </li>

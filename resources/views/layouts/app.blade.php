@@ -124,7 +124,7 @@
                     </div>
                 @endif
                 <p class="lead">
-                    <br>1800 443-5493
+                    <br>+380 63 451 82 70
                 </p>
                 <p class="lead">support@education-project.space</p>
             </div>

@@ -9,7 +9,7 @@
 use SleepingOwl\Admin\Model\ModelConfiguration;
 
 AdminSection::registerModel(\App\Calendar::class, function (ModelConfiguration $model) {
-    $model->setTitle('Блог');
+    $model->setTitle('Календар');
     // Display
     $model->onDisplay(function () {
         $display = AdminDisplay::datatables()->setColumns([
