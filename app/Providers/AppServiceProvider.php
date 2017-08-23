@@ -15,10 +15,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if ($this->app->environment('production')) {
-            view()->share('directions', Direction::get());
-            view()->share('lastNews', Article::orderBy('date', 'desc')->take(3)->get());
-        }
+        view()->share('directions', Direction::get());
+        view()->share('lastNews', Article::orderBy('date', 'desc')->take(3)->get());
     }
 
     /**

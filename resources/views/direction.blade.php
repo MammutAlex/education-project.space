@@ -12,7 +12,11 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="row">
-                    @foreach($links as $link)
+                    @foreach($links as $index=>$link)
+                        @if((($index)%4) ==0)
+                            </div>
+                            <div class="row">
+                        @endif
                         <div class="col-sm-6 col-md-3">
                             <div class="product-box">
                                 <div class="product-thumb">
