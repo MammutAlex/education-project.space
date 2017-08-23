@@ -11,11 +11,12 @@
     <div class="container margin-b-30">
         <div class="row margin-b-30">
             <div class="col-sm-5">
-                <h3>Information</h3>
+                <h3>Інформація</h3>
             </div>
             <div class="col-sm-7">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat.
                 </p>
                 <p>124, Munna Wali Dhani, Lalchandpura, Niwaru Road, Jhotwara, Jaipur, Rajsthan, 302012</p>
                 <p>Telephone: 1800.123.4534<br>Fax: 1800.123.4534</p>
@@ -23,33 +24,35 @@
         </div>
         <div class="row margin-b-30">
             <div class="col-sm-5">
-                <h3>Contact form</h3>
+                <h3>Контактна форма</h3>
             </div>
             <div class="col-sm-7">
-                <form method="post" action="#" class="boland-contact">
+                @if (session('contacted'))
+                    <p class="text-primary">Ваше повідомлення успішно надіслане</p>
+                @endif
+                <form method="POST" action="{{ route('contact') }}">
+                    {{ csrf_field() }}
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-12 margin-b-20">
-                                    <input type="text" name="name" class="form-control" placeholder="Full Name...." />
+                                <div class="col-sm-12 margin-b-20{{ $errors->has('name') ? ' has-error' : '' }}">
+                                    <input type="text" name="name" class="form-control" placeholder="Імʼя...."/>
                                 </div>
-                                <div class="col-sm-12 margin-b-20">
-                                    <input type="text" name="email" class="form-control" placeholder="Email Address...." />
+                                <div class="col-sm-12 margin-b-20{{ $errors->has('email') ? ' has-error' : '' }}">
+                                    <input type="email" name="email" class="form-control" placeholder="Email...."
+                                           required/>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-12 margin-b-20">
-                            <textarea name="message" class="form-control" rows="5" placeholder="Message...."></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <div class="data-status"></div> <!-- data submit status -->
+                        <div class="col-sm-12 margin-b-20{{ $errors->has('text') ? ' has-error' : '' }}">
+                            <textarea name="text" class="form-control" rows="5" placeholder="Повідомлення...."
+                                      required></textarea>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12 text-left">
-                            <button type="submit" name="submit" class="btn btn-lg btn-dark">send message</button>
+                            <button type="submit" class="btn btn-lg btn-dark">Надіслати повідомлення
+                            </button>
                         </div>
                     </div>
                 </form>

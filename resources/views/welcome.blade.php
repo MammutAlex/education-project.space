@@ -77,14 +77,23 @@
             </div>
             <div class="col-md-6 margin-b-30">
                 <h3 class="text-capitalize margin-b-40"> Підпишіться на новини</h3>
-                <form class="form-newsletter-lg">
+
+                @if(!session('subscribed'))
+                    <form class="form-newsletter-lg{{ $errors->has('email') ? ' has-error' : '' }}" method="POST"
+                          action="{{ route('subscribed') }}">
+                        <p class="margin-b-20">
+                            Текст запрошення підписатись і пояснення що отримають (найбільш актуальні новини і т.д.)
+                        </p>
+                        {{ csrf_field() }}
+                        <input type="email" name="email" class="form-control margin-b-20" placeholder="Введіть email"
+                               required="">
+                        <input type="submit" class="btn btn-link" value="Підписатись">
+                    </form>
+                @else
                     <p class="margin-b-20">
-                        Subscribe to the Boland mailing list to receive updates on new arrivals, special offers and
-                        other discount information
+                        Текст привітання з підпискою
                     </p>
-                    <input type="email" class="form-control margin-b-20" placeholder="Enter Email Here" required="">
-                    <input type="submit" class="btn btn-link" value="Subscribe">
-                </form>
+                @endif
             </div>
         </div>
     </div>

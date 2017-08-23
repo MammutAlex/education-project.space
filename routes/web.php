@@ -19,7 +19,9 @@ Route::get('/direction/{direction}', 'DirectionController@show')->name('directio
 Route::get('/blog', 'BlogController@index')->name('blog');
 Route::get('/blog/{blog}', 'BlogController@show')->name('article');
 
-Route::get('/contact', 'WelcomeController@contact')->name('contact');
+Route::get('/contact', 'ContactController@index')->name('contact');
+Route::post('/contact', 'ContactController@store')->name('contact');
+Route::post('/subscribed', 'ContactController@subscribed')->name('subscribed');
 Route::get('/organizations', 'WelcomeController@organizations')->name('organizations');
 Route::get('/about', 'WelcomeController@about')->name('about');
 

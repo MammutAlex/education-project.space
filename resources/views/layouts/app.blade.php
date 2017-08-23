@@ -73,6 +73,9 @@
                 <li class="{{isActiveRoute('contact')}}"><a href="{{route('contact')}}">Контакт</a></li>
                 <li class="{{isActiveRoute('organizations')}}"><a href="{{route('organizations')}}">Організації</a></li>
                 <li class="{{isActiveRoute('about')}}"><a href="{{route('about')}}">Про нас</a></li>
+                @if(auth()->check())
+                    <li><a href="/admin">Адмін панель</a></li>
+                @endif
             </ul>
         </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->
@@ -84,14 +87,14 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-3 margin-b-30">
+            <div class="col-md-4 margin-b-30">
                 <h4>Про нас</h4>
                 <p>
                     Команда з Інституту космічних досліджень централізувала в одному порталі всі організації, що
                     займаються освітньою і популяризаційною діяльністю в галузі космічних досліджень.
                 </p>
             </div><!--/col-->
-            <div class="col-md-3 margin-b-30">
+            <div class="col-md-4 margin-b-30">
                 <h4>Останні новини</h4>
                 <ul class="list-unstyled latest-news">
                     @foreach($lastNews as $new)
@@ -109,27 +112,21 @@
                     @endforeach
                 </ul>
             </div><!--/col-->
-            <div class="col-md-3 margin-b-30">
-                <h4>Сторінки</h4>
-                <ul class="list-unstyled link-list">
-                    <li><a href="{{route('blog')}}">Блог</a></li>
-                    <li><a href="{{route('contact')}}">Контакт</a></li>
-                    <li><a href="{{route('organizations')}}">Організації</a></li>
-                    <li><a href="{{route('about')}}">Про нас</a></li>
-                </ul>
-            </div><!--/col-->
-            <div class="col-md-3 margin-b-30">
+            <div class="col-md-4 margin-b-30">
                 <h4>Контактні дані</h4>
-                <div class="newsletter-form margin-b-20">
-                    <form>
-                        <input type="text" class="form-control margin-b-10" placeholder="Email ">
-                        <button class="newsletter-button" type="button"><i class="fa fa-angle-right"> </i></button>
-                    </form>
-                </div>
+                @if(!session('subscribed'))
+                    <div class="newsletter-form margin-b-20{{ $errors->has('email') ? ' has-error' : '' }}">
+                        <form method="POST" action="{{ route('subscribed') }}">
+                            {{ csrf_field() }}
+                            <input type="email" name="email" class="form-control margin-b-10" placeholder="Email">
+                            <button class="newsletter-button" type="submit"><i class="fa fa-angle-right"> </i></button>
+                        </form>
+                    </div>
+                @endif
                 <p class="lead">
                     <br>1800 443-5493
                 </p>
-                <p class="lead">support@boland.com</p>
+                <p class="lead">support@education-project.space</p>
             </div>
         </div>
     </div>

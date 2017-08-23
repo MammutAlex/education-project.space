@@ -24,11 +24,6 @@ class WelcomeController extends Controller
         return view('coming-soon');
     }
 
-    public function contact()
-    {
-        return view('contact');
-    }
-
     public function organizations(Organization $organization)
     {
         return view('organizations', ['organizations' => $organization->get()]);
