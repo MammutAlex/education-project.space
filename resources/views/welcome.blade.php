@@ -55,57 +55,24 @@
             <div class="col-md-6 margin-b-30">
                 <h3 class="text-capitalize margin-b-40"> Останні новини</h3>
                 <ul class="quick-news-list list-unstyled">
-                    <li class="clearfix">
-                        <div class="date">
-                            <span>03</span>
-                            Dec
-                        </div>
-                        <div class="content">
-                            <a href="#">
-                                <h4>
-                                    Boland Shop Flat 50% Off on new Arrivals
-                                </h4>
-                            </a>
-                            <ul class="list-inline quick-meta">
-                                <li><a href="#">Fashion</a></li>
-                                <li><a href="#">22 Comments</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="clearfix">
-                        <div class="date">
-                            <span>23</span>
-                            Dec
-                        </div>
-                        <div class="content">
-                            <a href="#">
-                                <h4>
-                                    Awesome post title goes here
-                                </h4>
-                            </a>
-                            <ul class="list-inline quick-meta">
-                                <li><a href="#">Decor</a></li>
-                                <li><a href="#">27 Comments</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="clearfix">
-                        <div class="date">
-                            <span>21</span>
-                            Jan
-                        </div>
-                        <div class="content">
-                            <a href="#">
-                                <h4>
-                                    This text will easily change
-                                </h4>
-                            </a>
-                            <ul class="list-inline quick-meta">
-                                <li><a href="#">Lifestyle</a></li>
-                                <li><a href="#">07 Comments</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                    @foreach($calendars as $calendar)
+                        <li class="clearfix">
+                            <div class="date">
+                                <span>{{date('d',strtotime($calendar->date))}}</span>
+                                {{date('m/Y',strtotime($calendar->date))}}
+                            </div>
+                            <div class="content">
+                                <a rel="nofollow noopener" target="_blank" href="{{$calendar->url}}">
+                                    <h4>
+                                        {{$calendar->title}}
+                                    </h4>
+                                </a>
+                                <ul class="list-inline quick-meta">
+                                    {{$calendar->description}}
+                                </ul>
+                            </div>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
             <div class="col-md-6 margin-b-30">

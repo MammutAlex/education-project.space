@@ -26,4 +26,7 @@ return [
     (new Page(\App\Review::class))
         ->setIcon('fa fa-external-link')
         ->setPriority(0),
+    (new Page(\App\Calendar::class))
+        ->setIcon('fa fa-external-link')
+        ->setPriority(0),
 ];

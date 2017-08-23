@@ -63,7 +63,9 @@
                        aria-expanded="false">Напрямки <i class="fa fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
                         @foreach($directions as $direction)
-                            <li><a href="{{route('direction',['direction'=>$direction->url])}}">{{$direction->title}}</a></li>
+                            <li>
+                                <a href="{{route('direction',['direction'=>$direction->url])}}">{{$direction->title}}</a>
+                            </li>
                         @endforeach
                     </ul>
                 </li>
@@ -85,53 +87,26 @@
             <div class="col-md-3 margin-b-30">
                 <h4>Про нас</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                    laoreet dolore magna aliquam erat volutpat.
+                    Команда з Інституту космічних досліджень централізувала в одному порталі всі організації, що
+                    займаються освітньою і популяризаційною діяльністю в галузі космічних досліджень.
                 </p>
-                <ul class="list-inline socials">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                </ul>
             </div><!--/col-->
             <div class="col-md-3 margin-b-30">
                 <h4>Останні новини</h4>
                 <ul class="list-unstyled latest-news">
-                    <li class="clearfix">
-                        <div class="pull-left">
-                            <a href="#">
-                                <img src="images/img-1.jpg" alt="" width="50" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="content">
-                            <h5><a href="#">Lorem ipsum dolor</a></h5>
-                            <span>Lorem ipsum dolor ...</span>
-                        </div>
-                    </li>
-                    <li class="clearfix">
-                        <div class="pull-left">
-                            <a href="#">
-                                <img src="images/img-2.jpg" alt="" width="50" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="content">
-                            <h5><a href="#">this is a post title</a></h5>
-                            <span>Lorem ipsum dolor ...</span>
-                        </div>
-                    </li>
-                    <li class="clearfix">
-                        <div class="pull-left">
-                            <a href="#">
-                                <img src="images/img-3.jpg" alt="" width="50" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="content">
-                            <h5><a href="#">Post title goes here</a></h5>
-                            <span>Lorem ipsum dolor ...</span>
-                        </div>
-                    </li>
+                    @foreach($lastNews as $new)
+                        <li class="clearfix">
+                            <div class="pull-left">
+                                <a href="{{route('article',['article'=>$new->id])}}">
+                                    <img src="/{{$new->image}}" alt="" width="50" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h5><a href="{{route('article',['article'=>$new->id])}}">{{$new->title}}</a></h5>
+                                <span>{{substr($new->description,0,25)}} ...</span>
+                            </div>
+                        </li>
+                    @endforeach
                 </ul>
             </div><!--/col-->
             <div class="col-md-3 margin-b-30">
