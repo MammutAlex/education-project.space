@@ -19,78 +19,53 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 col-sm-6 margin-b-30">
-                <div class="person-box">
-                    <img src="images/team1.jpg" alt="" class="img-responsive margin-b-20">
-                    <h4>John Doe <br>
-                        <small>Ceo & Founder</small>
-                    </h4>
-                    <ul class="list-inline social-icons">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    </ul>
-                    <p class="text-small">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.
-                    </p>
-                </div><!--/person-box-->
-            </div>
-            <div class="col-md-3 col-sm-6 margin-b-30">
-                <div class="person-box">
-                    <img src="images/team2.jpg" alt="" class="img-responsive margin-b-20">
-                    <h4>John Doe <br>
-                        <small>Ceo & Founder</small>
-                    </h4>
-                    <ul class="list-inline social-icons">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    </ul>
-                    <p class="text-small">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.
-                    </p>
-                </div><!--/person-box-->
-            </div>
-            <div class="col-md-3 col-sm-6 margin-b-30">
-                <div class="person-box">
-                    <img src="images/team3.jpg" alt="" class="img-responsive margin-b-20">
-                    <h4>John Doe <br>
-                        <small>Ceo & Founder</small>
-                    </h4>
-                    <ul class="list-inline social-icons">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    </ul>
-                    <p class="text-small">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.
-                    </p>
-                </div><!--/person-box-->
-            </div>
-            <div class="col-md-3 col-sm-6 margin-b-30">
-                <div class="person-box">
-                    <img src="images/team4.jpg" alt="" class="img-responsive margin-b-20">
-                    <h4>John Doe <br>
-                        <small>Ceo & Founder</small>
-                    </h4>
-                    <ul class="list-inline social-icons">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    </ul>
-                    <p class="text-small">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.
-                    </p>
-                </div><!--/person-box-->
-            </div>
+            @foreach($persons as $person)
+                <div class="col-md-3 col-sm-6 margin-b-30">
+                    <div class="person-box">
+                        <img src="/{{$person->photo}}" alt="{{$person->name}}" class="img-responsive margin-b-20">
+                        <h4>{{$person->name}} <br>
+                            <small>{{$person->position}}</small>
+                        </h4>
+                        <ul class="list-inline social-icons">
+                            @if($person->facebook)
+                                <li>
+                                    <a rel="nofollow noopener" target="_blank"
+                                       href="https://www.facebook.com/{{$person->facebook}}">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                            @endif
+                            @if($person->twitter)
+                                <li>
+                                    <a rel="nofollow noopener" target="_blank"
+                                       href="https://twitter.com/{{$person->facebook}}">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                            @endif
+                            @if($person->linkedin)
+                                <li>
+                                    <a rel="nofollow noopener" target="_blank"
+                                       href="https://www.linkedin.com/in/{{$person->linkedin}}">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                            @endif
+                            @if($person->instagram)
+                                <li>
+                                    <a rel="nofollow noopener" target="_blank"
+                                       href="https://www.instagram.com/{{$person->instagram}}">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                </li>
+                            @endif
+                        </ul>
+                        <p class="text-small">
+                            {{$person->description}}
+                        </p>
+                    </div><!--/person-box-->
+                </div>
+            @endforeach
         </div>
     </div>
 @endsection

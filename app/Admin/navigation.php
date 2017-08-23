@@ -20,4 +20,7 @@ return [
     (new Page(\App\Organization::class))
         ->setIcon('fa fa-external-link')
         ->setPriority(0),
+    (new Page(\App\Person::class))
+        ->setIcon('fa fa-external-link')
+        ->setPriority(0),
 ];

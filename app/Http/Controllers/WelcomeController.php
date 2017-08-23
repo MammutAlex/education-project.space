@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Organization;
+use App\Person;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
@@ -27,8 +28,8 @@ class WelcomeController extends Controller
         return view('organizations', ['organizations' => $organization->get()]);
     }
 
-    public function about()
+    public function about(Person $person)
     {
-        return view('about');
+        return view('about', ['persons' => $person->get()]);
     }
 }

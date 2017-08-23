@@ -7,10 +7,8 @@
                 <div class="col-sm-8 col-sm-offset-2 text-center">
                     <h1>Коротко про нас</h1>
                     <p class="lead">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum justo vitae convallis
-                        varius. Nulla tristique risus ut justo pulvinar mattis. Phasellus aliquet egestas mauris in
-                        venenatis. Nulla tristique risus ut justo pulvinar mattis. Phasellus aliquet egestas mauris in
-                        venenatis.
+                        Команда з Інституту космічних досліджень централізувала в одному порталі всі організації, що
+                        займаються освітньою і популяризаційною діяльністю в галузі космічних досліджень.
                     </p>
                 </div>
             </div>
