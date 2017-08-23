@@ -37,5 +37,16 @@ class DirectionsTableSeeder extends Seeder
             'photo' => 'images/img-1.jpg',
             'title' => 'Викладачі',
         ]);
+
+        foreach (App\Direction::all() as $user) {
+            for ($i = 1; ; $i++) {
+                if ($i > 15) {
+                    break;
+                }
+                $user->links()->save(
+                    factory(App\Link::class)->create()
+                );
+            }
+        }
     }
 }

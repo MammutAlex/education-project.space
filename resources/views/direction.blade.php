@@ -12,210 +12,31 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="row">
-                    <div class="col-sm-6 col-md-3">
-                        <div class="product-box">
-                            <div class="product-thumb">
-                                <img src="/images/products/p1.jpg" alt="" class="img-responsive">
-                                <div class="product-overlay">
+                    @foreach($links as $link)
+                        <div class="col-sm-6 col-md-3">
+                            <div class="product-box">
+                                <div class="product-thumb">
+                                    <img src="/{{$link->photo}}" alt="{{$link->title}}" class="img-responsive">
+                                    <div class="product-overlay">
                                         <span>
-                                            <a class="btn btn-default">Детальніше</a>
+                                            <a rel="nofollow noopener" target="_blank" href="{{$link->url}}"
+                                               class="btn btn-default">Детальніше</a>
                                         </span>
-                                </div>
-                            </div><!--/product-thumb-->
-                            <div class="product-desc">
-                                <h5 class="product-name"><a href="#">Цікава новина у нас</a></h5>
-                            </div><!--/product-desc-->
+                                    </div>
+                                </div><!--/product-thumb-->
+                                <div class="product-desc">
+                                    <h5 class="product-name">
+                                        <a rel="nofollow noopener" target="_blank"
+                                           href="{{$link->url}}">{{$link->title}}</a>
+                                    </h5>
+                                </div><!--/product-desc-->
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="product-box">
-                            <div class="product-thumb">
-                                <img src="/images/products/p1.jpg" alt="" class="img-responsive">
-                                <div class="product-overlay">
-                                        <span>
-                                            <a class="btn btn-default">Детальніше</a>
-                                        </span>
-                                </div>
-                            </div><!--/product-thumb-->
-                            <div class="product-desc">
-                                <h5 class="product-name"><a href="#">Цікава новина у нас</a></h5>
-                            </div><!--/product-desc-->
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="product-box">
-                            <div class="product-thumb">
-                                <img src="/images/products/p1.jpg" alt="" class="img-responsive">
-                                <div class="product-overlay">
-                                        <span>
-                                            <a class="btn btn-default">Детальніше</a>
-                                        </span>
-                                </div>
-                            </div><!--/product-thumb-->
-                            <div class="product-desc">
-                                <h5 class="product-name"><a href="#">Цікава новина у нас</a></h5>
-                            </div><!--/product-desc-->
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="product-box">
-                            <div class="product-thumb">
-                                <img src="/images/products/p1.jpg" alt="" class="img-responsive">
-                                <div class="product-overlay">
-                                        <span>
-                                            <a class="btn btn-default">Детальніше</a>
-                                        </span>
-                                </div>
-                            </div><!--/product-thumb-->
-                            <div class="product-desc">
-                                <h5 class="product-name"><a href="#">Цікава новина у нас</a></h5>
-                            </div><!--/product-desc-->
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 col-md-3">
-                        <div class="product-box">
-                            <div class="product-thumb">
-                                <img src="/images/products/p1.jpg" alt="" class="img-responsive">
-                                <div class="product-overlay">
-                                        <span>
-                                            <a class="btn btn-default">Детальніше</a>
-                                        </span>
-                                </div>
-                            </div><!--/product-thumb-->
-                            <div class="product-desc">
-                                <h5 class="product-name"><a href="#">Цікава новина у нас</a></h5>
-                            </div><!--/product-desc-->
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="product-box">
-                            <div class="product-thumb">
-                                <img src="/images/products/p1.jpg" alt="" class="img-responsive">
-                                <div class="product-overlay">
-                                        <span>
-                                            <a class="btn btn-default">Детальніше</a>
-                                        </span>
-                                </div>
-                            </div><!--/product-thumb-->
-                            <div class="product-desc">
-                                <h5 class="product-name"><a href="#">Цікава новина у нас</a></h5>
-                            </div><!--/product-desc-->
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="product-box">
-                            <div class="product-thumb">
-                                <img src="/images/products/p1.jpg" alt="" class="img-responsive">
-                                <div class="product-overlay">
-                                        <span>
-                                            <a class="btn btn-default">Детальніше</a>
-                                        </span>
-                                </div>
-                            </div><!--/product-thumb-->
-                            <div class="product-desc">
-                                <h5 class="product-name"><a href="#">Цікава новина у нас</a></h5>
-                            </div><!--/product-desc-->
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="product-box">
-                            <div class="product-thumb">
-                                <img src="/images/products/p1.jpg" alt="" class="img-responsive">
-                                <div class="product-overlay">
-                                        <span>
-                                            <a class="btn btn-default">Детальніше</a>
-                                        </span>
-                                </div>
-                            </div><!--/product-thumb-->
-                            <div class="product-desc">
-                                <h5 class="product-name"><a href="#">Цікава новина у нас</a></h5>
-                            </div><!--/product-desc-->
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 col-md-3">
-                        <div class="product-box">
-                            <div class="product-thumb">
-                                <img src="/images/products/p1.jpg" alt="" class="img-responsive">
-                                <div class="product-overlay">
-                                        <span>
-                                            <a class="btn btn-default">Детальніше</a>
-                                        </span>
-                                </div>
-                            </div><!--/product-thumb-->
-                            <div class="product-desc">
-                                <h5 class="product-name"><a href="#">Цікава новина у нас</a></h5>
-                            </div><!--/product-desc-->
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="product-box">
-                            <div class="product-thumb">
-                                <img src="/images/products/p1.jpg" alt="" class="img-responsive">
-                                <div class="product-overlay">
-                                        <span>
-                                            <a class="btn btn-default">Детальніше</a>
-                                        </span>
-                                </div>
-                            </div><!--/product-thumb-->
-                            <div class="product-desc">
-                                <h5 class="product-name"><a href="#">Цікава новина у нас</a></h5>
-                            </div><!--/product-desc-->
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="product-box">
-                            <div class="product-thumb">
-                                <img src="/images/products/p1.jpg" alt="" class="img-responsive">
-                                <div class="product-overlay">
-                                        <span>
-                                            <a class="btn btn-default">Детальніше</a>
-                                        </span>
-                                </div>
-                            </div><!--/product-thumb-->
-                            <div class="product-desc">
-                                <h5 class="product-name"><a href="#">Цікава новина у нас</a></h5>
-                            </div><!--/product-desc-->
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="product-box">
-                            <div class="product-thumb">
-                                <img src="/images/products/p1.jpg" alt="" class="img-responsive">
-                                <div class="product-overlay">
-                                        <span>
-                                            <a class="btn btn-default">Детальніше</a>
-                                        </span>
-                                </div>
-                            </div><!--/product-thumb-->
-                            <div class="product-desc">
-                                <h5 class="product-name"><a href="#">Цікава новина у нас</a></h5>
-                            </div><!--/product-desc-->
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 <div class="space-30"></div>
                 <nav aria-label="Page navigation" class="text-right margin-b-30">
-                    <ul class="pagination">
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">«</span>
-                            </a>
-                        </li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">»</span>
-                            </a>
-                        </li>
-                    </ul>
+                    {{ $links->links() }}
                 </nav>
             </div>
         </div>

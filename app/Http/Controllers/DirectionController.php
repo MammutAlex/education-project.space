@@ -9,10 +9,15 @@
 namespace App\Http\Controllers;
 
 
+use App\Direction;
+
 class DirectionController extends Controller
 {
-    public function show($id)
+    public function show($id, Direction $model)
     {
-        return view('direction');
+        $direction = $model->where('url', $id)->firstOrFail();
+        $links = $direction->links()->paginate(12);
+
+        return view('direction', ['links' => $links]);
     }
 }

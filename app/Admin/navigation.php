@@ -14,4 +14,7 @@ return [
     (new Page(\App\Direction::class))
         ->setIcon('fa fa-university')
         ->setPriority(0),
+    (new Page(\App\Link::class))
+        ->setIcon('fa fa-external-link')
+        ->setPriority(0),
 ];
