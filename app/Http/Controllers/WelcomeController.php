@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Organization;
 use App\Person;
+use App\Review;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
 {
-    public function index()
+    public function index(Review $review)
     {
-        return view('welcome');
+        return view('welcome', ['reviews' => $review->get()]);
     }
 
     public function coming()

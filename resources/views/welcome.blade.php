@@ -31,52 +31,22 @@
     <div class="space-80"></div>
     <div class="testimonials">
         <div class="testi-slider owl-carousel owl-theme">
-            <div class="item">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2">
-                            <p>
-                                " It is a long established fact that a reader will be distracted by the readable content
-                                of a page when looking at its layout.
-                                "
-                            </p>
-                            <h4>Steven Smith
-                                <small>Boland customer</small>
-                            </h4>
+            @foreach($reviews as $review)
+                <div class="item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <p>
+                                    "{{$review->text}}"
+                                </p>
+                                <h4>{{$review->name}}
+                                    <small>{{$review->position}}</small>
+                                </h4>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div><!--item-->
-            <div class="item">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2">
-                            <p>
-                                " There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form "
-                            </p>
-                            <h4>John Doe
-                                <small>Boland customer</small>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-            </div><!--item-->
-            <div class="item">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2">
-                            <p>
-                                It is a long established fact that a reader will be distracted by the readable content
-                                of a page when looking at its layout.
-                            </p>
-                            <h4>Steven Smith
-                                <small>Boland customer</small>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-            </div><!--item-->
+            @endforeach
         </div>
     </div><!--/testimonials-->
     <div class="space-80"></div>
