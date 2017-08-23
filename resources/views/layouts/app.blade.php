@@ -62,7 +62,9 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Напрямки <i class="fa fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{route('direction',['direction'=>'test'])}}">Діти</a></li>
+                        @foreach($directions as $direction)
+                            <li><a href="{{route('direction',['direction'=>$direction->url])}}">{{$direction->title}}</a></li>
+                        @endforeach
                     </ul>
                 </li>
                 <li class="{{isActiveRoute('blog')}}"><a href="{{route('blog')}}">Блог</a></li>

@@ -14,7 +14,7 @@
 Route::get('/', 'WelcomeController@coming')->name('coming');
 
 Route::get('/index', 'WelcomeController@index')->name('index');
-Route::get('/direction/{direction}', 'WelcomeController@direction')->name('direction');
+Route::get('/direction/{direction}', 'DirectionController@show')->name('direction');
 
 Route::get('/blog', 'BlogController@index')->name('blog');
 Route::get('/blog/{blog}', 'BlogController@show')->name('article');

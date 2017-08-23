@@ -11,4 +11,7 @@ return [
     (new Page(\App\Article::class))
         ->setIcon('fa fa-file-text-o')
         ->setPriority(0),
+    (new Page(\App\Direction::class))
+        ->setIcon('fa fa-university')
+        ->setPriority(0),
 ];

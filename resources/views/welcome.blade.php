@@ -18,30 +18,16 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-4 margin-b-30">
-                <a class="image-box" href="blog.html">
-                    <img src="images/img-1.jpg" alt="" class="img-responsive">
-                    <div class="img-overlay">
-                        <h1>Latest news</h1>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-4 margin-b-30">
-                <a class="image-box" href="about.html">
-                    <img src="images/img-3.jpg" alt="" class="img-responsive">
-                    <div class="img-overlay">
-                        <h1>Our Store</h1>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-4 margin-b-30">
-                <a class="image-box" href="cat-grid-2col.html">
-                    <img src="images/img-2.jpg" alt="" class="img-responsive">
-                    <div class="img-overlay">
-                        <h1>Products</h1>
-                    </div>
-                </a>
-            </div>
+            @foreach($directions as $direction)
+                <div class="col-sm-4 margin-b-30">
+                    <a class="image-box" href="{{route('direction',['direction'=>$direction->url])}}">
+                        <img src="/{{$direction->photo}}" alt="{{$direction->title}}" class="img-responsive">
+                        <div class="img-overlay">
+                            <h1>{{$direction->title}}</h1>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
         </div>
     </div>
     <div class="space-80"></div>
