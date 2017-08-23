@@ -21,16 +21,6 @@ class WelcomeController extends Controller
         return view('direction');
     }
 
-    public function blog()
-    {
-        return view('blog');
-    }
-
-    public function article()
-    {
-        return view('article');
-    }
-
     public function contact()
     {
         return view('contact');

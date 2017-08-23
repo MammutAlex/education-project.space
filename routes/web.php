@@ -15,8 +15,10 @@ Route::get('/', 'WelcomeController@coming')->name('coming');
 
 Route::get('/index', 'WelcomeController@index')->name('index');
 Route::get('/direction/{direction}', 'WelcomeController@direction')->name('direction');
-Route::get('/blog', 'WelcomeController@blog')->name('blog');
-Route::get('/blog/{blog}', 'WelcomeController@article')->name('article');
+
+Route::get('/blog', 'BlogController@index')->name('blog');
+Route::get('/blog/{blog}', 'BlogController@show')->name('article');
+
 Route::get('/contact', 'WelcomeController@contact')->name('contact');
 Route::get('/organizations', 'WelcomeController@organizations')->name('organizations');
 Route::get('/about', 'WelcomeController@about')->name('about');
