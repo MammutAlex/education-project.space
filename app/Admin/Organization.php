@@ -8,24 +8,21 @@
 
 use SleepingOwl\Admin\Model\ModelConfiguration;
 
-AdminSection::registerModel(\App\Link::class, function (ModelConfiguration $model) {
-    $model->setTitle('Посилання');
+AdminSection::registerModel(\App\Organization::class, function (ModelConfiguration $model) {
+    $model->setTitle('Організації');
     // Display
     $model->onDisplay(function () {
         $display = AdminDisplay::datatables()->setColumns([
-            AdminColumn::image('photo')->setLabel('Зображеня'),
             AdminColumn::link('title')->setLabel('Заголовок'),
-            AdminColumn::text('url')->setLabel('Посилання'),
+            AdminColumn::text('text')->setLabel('Текст'),
         ]);
         return $display;
     });
     // Create And Edit
     $model->onCreateAndEdit(function () {
         $form = AdminForm::panel()->addBody(
-            AdminFormElement::multiselect('directions', 'Напрямки', \App\Direction::class)->required(),
-            AdminFormElement::image('photo', 'Зображеня')->required(),
             AdminFormElement::text('title', 'Заголовок')->required(),
-            AdminFormElement::text('url', 'Посилання')->required()->unique()
+            AdminFormElement::textarea('text', 'Текст')->required()
         );
         return $form;
     });

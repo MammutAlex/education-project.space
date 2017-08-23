@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Organization;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
@@ -21,9 +22,9 @@ class WelcomeController extends Controller
         return view('contact');
     }
 
-    public function organizations()
+    public function organizations(Organization $organization)
     {
-        return view('organizations');
+        return view('organizations', ['organizations' => $organization->get()]);
     }
 
     public function about()
