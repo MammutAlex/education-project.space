@@ -21,6 +21,4 @@ Route::get('/contact', 'WelcomeController@contact')->name('contact');
 Route::get('/organizations', 'WelcomeController@organizations')->name('organizations');
 Route::get('/about', 'WelcomeController@about')->name('about');
 
-//Auth::routes();
-//
-//Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();

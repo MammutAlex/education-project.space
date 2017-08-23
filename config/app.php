@@ -167,6 +167,7 @@ return [
         /*
          * Package Service Providers...
          */
+        SleepingOwl\Admin\Providers\SleepingOwlServiceProvider::class,
         Laravel\Tinker\TinkerServiceProvider::class,
 
         /*
