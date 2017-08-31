@@ -68,7 +68,7 @@
 <script>
     $(document).ready(function () {
         $('#countdown').timeTo({
-            timeTo: new Date(new Date('Thursday August 31 2017 16:00:00')),
+            timeTo: new Date(new Date('Thursday September 7 2017 16:00:00')),
             displayDays: 2,
             theme: "white",
             displayCaptions: true,
