@@ -14,21 +14,17 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            @foreach($directions as $index=>$direction)
-                @if((($index)%3) == 0 and $index != 0)
-        </div>
-        <div class="row">
-            @endif
-            <div class="col-sm-4 margin-b-30">
-                <a class="image-box" href="{{route('direction',['direction'=>$direction->url])}}">
-                    <img src="/{{$direction->photo}}" alt="{{$direction->title}}" class="img-responsive" width="550">
-                    <div class="img-overlay">
-                        <h1>{{$direction->title}}</h1>
-                    </div>
-                </a>
-            </div>
+    <div class="container margin-b-30">
+        <div class="row masonry-grid">
+            @foreach($directions as $direction)
+                <div class="col-sm-4 margin-b-30">
+                    <a class="image-box" href="{{route('direction',['direction'=>$direction->url])}}">
+                        <img src="/{{$direction->photo}}" alt="{{$direction->title}}" class="img-responsive">
+                        <div class="img-overlay">
+                            <h1>{{$direction->title}}</h1>
+                        </div>
+                    </a>
+                </div>
             @endforeach
         </div>
     </div>
