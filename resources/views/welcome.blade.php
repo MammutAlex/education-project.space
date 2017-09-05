@@ -14,10 +14,10 @@
             </div>
         </div>
     </div>
-    <div class="container margin-b-30">
+    <div class="container">
         <div class="row masonry-grid">
-            @foreach($directions as $direction)
-                <div class="col-sm-4 margin-b-30">
+            @foreach($directions as $index=>$direction)
+                <div class="col-sm-4  masonry-item margin-b-30">
                     <a class="image-box" href="{{route('direction',['direction'=>$direction->url])}}">
                         <img src="/{{$direction->photo}}" alt="{{$direction->title}}" class="img-responsive">
                         <div class="img-overlay">
@@ -123,5 +123,15 @@
                 autoplay: true
             });
         })(jQuery);
+    </script>
+    <script src="/plugins/masonry/masonry.pkgd.min.js"></script>
+    <script src="/plugins/masonry/imagesloaded.pkgd.min.js"></script>
+    <script>
+        var $container = $('.masonry-grid');
+        $container.imagesLoaded(function () {
+            $container.masonry({
+                itemSelector: '.masonry-item'
+            });
+        });
     </script>
 @endsection
