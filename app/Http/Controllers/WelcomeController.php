@@ -6,13 +6,16 @@ use App\Calendar;
 use App\Organization;
 use App\Person;
 use App\Review;
-use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
 {
     public function index(Review $review, Calendar $calendar)
     {
-        $calendars = $calendar->orderBy('date', 'desc')->take(3)->get();
+        $calendars = $calendar
+            ->whereDate('date', '>=', date('Y-m-d'))
+            ->orderBy('date')
+            ->take(3)
+            ->get();
         return view('welcome', [
             'reviews' => $review->get(),
             'calendars' => $calendars
