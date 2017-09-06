@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', 'WelcomeController@coming')->name('coming');
-
-Route::get('/index', 'WelcomeController@index')->name('index');
+Route::get('/', 'WelcomeController@index')->name('index');
 Route::get('/direction/{direction}', 'DirectionController@show')->name('direction');
 
 Route::get('/blog', 'BlogController@index')->name('blog');
