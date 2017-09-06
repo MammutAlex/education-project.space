@@ -15,11 +15,18 @@
             </div>
             <div class="col-sm-7">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                    laoreet dolore magna aliquam erat volutpat.
+                    Якщо Вам стала в нагоді інформація на сайті і Ви маєте, що нам сказати?
                 </p>
-                <p>124, Munna Wali Dhani, Lalchandpura, Niwaru Road, Jhotwara, Jaipur, Rajsthan, 302012</p>
-                <p>Telephone: 1800.123.4534<br>Fax: 1800.123.4534</p>
+                <p>
+                    Якщо Ви є представником організації, яка займається популяризацією космічних досліджень, або науковою діяльністю в галузі космічних досліджень, а ми про вас досі нічого не знаємо?
+                </p>
+                <p>
+                    Зв'яжіться з нами і ми з радістю додамо вас до каталогу команди і будемо публікувати новини Вашої діяльності в напрямку освіти та популяризації космічних досліджень
+                </p>
+                <p>
+                    Телефон: <a href="tel:+380634518270">+380 63 451 82 70</a><br>
+                    Email: <a href="mailto:support@education-project.space">support@education-project.space</a>
+                </p>
             </div>
         </div>
         <div class="row margin-b-30">
@@ -76,11 +83,11 @@
                 $('#googlemaps').gMap({
                     maptype: 'ROADMAP',
                     scrollwheel: false,
-                    zoom: 13,
+                    zoom: 11,
                     markers: [
                         {
-                            address: 'New York, 45 Park Avenue', // Your Adress Here
-                            html: '<strong>Our Office</strong><br>45 Park Avenue, Apt. 303 </br>New York, NY 302012 ',
+                            address: 'проспект Академіка Глушкова 40, корпус 4/1, Україна, Київ', // Your Adress Here
+                            html: '<strong>Наш Офіс</strong><br>проспект Академіка Глушкова 40, корпус 4/1, каб. 413</br> Україна, Київ ',
                             popup: false,
                             icon: {
                                 image: "images/marker.png",

@@ -124,9 +124,9 @@
                     </div>
                 @endif
                 <p class="lead">
-                    <br>+380 63 451 82 70
+                    <br><a href="tel:+380634518270">+380 63 451 82 70</a>
                 </p>
-                <p class="lead">support@education-project.space</p>
+                <p class="lead"><a href="mailto:support@education-project.space">support@education-project.space</a></p>
             </div>
         </div>
     </div>
