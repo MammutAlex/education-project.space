@@ -203,7 +203,6 @@ button:focus, input [type="submit"]:focus {
   margin-bottom: 0px;
   font-size: 30px;
   color: #fff;
-  text-transform: capitalize;
   font-weight: 500;
 }
 

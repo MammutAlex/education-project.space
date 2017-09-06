@@ -5,7 +5,7 @@
     <!--page header-->
     <div class="page-breadcrumb grey-bg margin-b-60">
         <div class="container">
-            <h4 class="margin-b-20">Організації які співпрацюють з нами</h4>
+            <h4 class="margin-b-20">Організації, які співпрацюють з нами</h4>
         </div>
     </div>
     <div class="container margin-b-30">
