@@ -14,6 +14,7 @@ AdminSection::registerModel(\App\Organization::class, function (ModelConfigurati
     $model->onDisplay(function () {
         $display = AdminDisplay::datatables()->setColumns([
             AdminColumn::link('title')->setLabel('Заголовок'),
+            AdminColumn::text('url')->setLabel('Посилання'),
             AdminColumn::text('text')->setLabel('Текст'),
         ]);
         return $display;
@@ -22,6 +23,7 @@ AdminSection::registerModel(\App\Organization::class, function (ModelConfigurati
     $model->onCreateAndEdit(function () {
         $form = AdminForm::panel()->addBody(
             AdminFormElement::text('title', 'Заголовок')->required()->setValidationRules(['max:255']),
+            AdminFormElement::text('url', 'Посилання')->required()->setValidationRules(['max:255']),
             AdminFormElement::textarea('text', 'Текст')->required()->setValidationRules(['max:255'])
         );
         return $form;
