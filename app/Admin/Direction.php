@@ -23,8 +23,8 @@ AdminSection::registerModel(\App\Direction::class, function (ModelConfiguration 
     $model->onCreateAndEdit(function () {
         $form = AdminForm::panel()->addBody(
             AdminFormElement::image('photo', 'Зображеня')->required(),
-            AdminFormElement::text('title', 'Заголовок')->required(),
-            AdminFormElement::text('url', 'Посилання')->required()->unique()
+            AdminFormElement::text('title', 'Заголовок')->required()->setValidationRules(['max:255']),
+            AdminFormElement::text('url', 'Посилання')->required()->unique()->setValidationRules(['max:255'])
         );
         return $form;
     });

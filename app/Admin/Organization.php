@@ -21,8 +21,8 @@ AdminSection::registerModel(\App\Organization::class, function (ModelConfigurati
     // Create And Edit
     $model->onCreateAndEdit(function () {
         $form = AdminForm::panel()->addBody(
-            AdminFormElement::text('title', 'Заголовок')->required(),
-            AdminFormElement::textarea('text', 'Текст')->required()
+            AdminFormElement::text('title', 'Заголовок')->required()->setValidationRules(['max:255']),
+            AdminFormElement::textarea('text', 'Текст')->required()->setValidationRules(['max:255'])
         );
         return $form;
     });

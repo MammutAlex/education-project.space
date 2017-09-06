@@ -24,8 +24,8 @@ AdminSection::registerModel(\App\Link::class, function (ModelConfiguration $mode
         $form = AdminForm::panel()->addBody(
             AdminFormElement::multiselect('directions', 'Напрямки', \App\Direction::class)->required(),
             AdminFormElement::image('photo', 'Зображеня')->required(),
-            AdminFormElement::text('title', 'Заголовок')->required(),
-            AdminFormElement::text('url', 'Посилання')->required()->unique()
+            AdminFormElement::text('title', 'Заголовок')->required()->setValidationRules(['max:255']),
+            AdminFormElement::text('url', 'Посилання')->required()->unique()->setValidationRules(['max:255'])
         );
         return $form;
     });

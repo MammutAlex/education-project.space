@@ -22,9 +22,9 @@ AdminSection::registerModel(\App\Calendar::class, function (ModelConfiguration $
     // Create And Edit
     $model->onCreateAndEdit(function () {
         $form = AdminForm::panel()->addBody(
-            AdminFormElement::text('title', 'Заголовок')->required(),
-            AdminFormElement::text('url', 'Посилання')->required(),
-            AdminFormElement::textarea('description', 'Опис')->required(),
+            AdminFormElement::text('title', 'Заголовок')->required()->setValidationRules(['max:255']),
+            AdminFormElement::text('url', 'Посилання')->required()->setValidationRules(['max:255']),
+            AdminFormElement::textarea('description', 'Опис')->required()->setValidationRules(['max:255']),
             AdminFormElement::date('date', 'Дата')->required()
         );
         return $form;

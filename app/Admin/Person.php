@@ -23,13 +23,13 @@ AdminSection::registerModel(\App\Person::class, function (ModelConfiguration $mo
     $model->onCreateAndEdit(function () {
         $form = AdminForm::panel()->addBody(
             AdminFormElement::image('photo', 'Зображеня')->required(),
-            AdminFormElement::text('name', 'Імя')->required(),
-            AdminFormElement::text('position', 'Посада')->required(),
-            AdminFormElement::textarea('description', 'Опис')->required(),
-            AdminFormElement::text('facebook', 'Facebook'),
-            AdminFormElement::text('twitter', 'Twitter'),
-            AdminFormElement::text('linkedin', 'Linkedin'),
-            AdminFormElement::text('instagram', 'Instagram')
+            AdminFormElement::text('name', 'Імя')->required()->setValidationRules(['max:255']),
+            AdminFormElement::text('position', 'Посада')->required()->setValidationRules(['max:255']),
+            AdminFormElement::textarea('description', 'Опис')->required()->setValidationRules(['max:255']),
+            AdminFormElement::text('facebook', 'Facebook')->setValidationRules(['max:255']),
+            AdminFormElement::text('twitter', 'Twitter')->setValidationRules(['max:255']),
+            AdminFormElement::text('linkedin', 'Linkedin')->setValidationRules(['max:255']),
+            AdminFormElement::text('instagram', 'Instagram')->setValidationRules(['max:255'])
         );
         return $form;
     });

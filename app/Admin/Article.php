@@ -24,8 +24,8 @@ AdminSection::registerModel(\App\Article::class, function (ModelConfiguration $m
     $model->onCreateAndEdit(function () {
         $form = AdminForm::panel()->addBody(
             AdminFormElement::image('image', 'Зображеня')->required(),
-            AdminFormElement::text('title', 'Заголовок')->required(),
-            AdminFormElement::textarea('description', 'Опис')->required(),
+            AdminFormElement::text('title', 'Заголовок')->required()->setValidationRules(['max:255']),
+            AdminFormElement::textarea('description', 'Опис')->required()->setValidationRules(['max:255']),
             AdminFormElement::date('date', 'Дата')->required(),
             AdminFormElement::ckeditor('text', 'Текст')->required()
         );
