@@ -36,10 +36,10 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-8 col-sm-offset-2">
-                                <p>
+                                <p class="text-center">
                                     "{{$review->text}}"
                                 </p>
-                                <h4>{{$review->name}}
+                                <h4>{{$review->name}}<br>
                                     <small>{{$review->position}}</small>
                                 </h4>
                             </div>
