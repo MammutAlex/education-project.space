@@ -17,7 +17,7 @@
                 @endif
                 <div class="col-sm-4 margin-b-30">
                     <div class="faq-box">
-                        <h4>{{$organization->title}}</h4>
+                        <h4><a rel="nofollow noopener" target="_blank" href="{{$organization->url}}">{{$organization->title}}</a></h4>
                         <p>{{$organization->text}}</p>
                     </div><!--end faq box-->
                 </div>
