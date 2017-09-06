@@ -28,7 +28,7 @@
                             @if($person->twitter)
                                 <li>
                                     <a rel="nofollow noopener" target="_blank"
-                                       href="https://twitter.com/{{$person->facebook}}">
+                                       href="https://twitter.com/{{$person->twitter}}">
                                         <i class="fa fa-twitter"></i>
                                     </a>
                                 </li>
