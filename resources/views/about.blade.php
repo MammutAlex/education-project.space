@@ -9,16 +9,6 @@
     </div>
     <div class="container margin-b-30">
         <div class="row">
-            <div class="col-sm-8 col-sm-offset-2 text-center margin-b-30">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum justo vitae convallis
-                    varius. Nulla tristique risus ut justo pulvinar mattis. Phasellus aliquet egestas mauris in
-                    venenatis. Nulla tristique risus ut justo pulvinar mattis. Phasellus aliquet egestas mauris in
-                    venenatis.
-                </p>
-            </div>
-        </div>
-        <div class="row">
             @foreach($persons as $person)
                 <div class="col-md-3 col-sm-6 margin-b-30">
                     <div class="person-box">
