@@ -15,7 +15,6 @@ AdminSection::registerModel(\App\Article::class, function (ModelConfiguration $m
         $display = AdminDisplay::datatables()->setColumns([
             AdminColumn::image('image')->setLabel('Зображеня'),
             AdminColumn::link('title')->setLabel('Заголовок'),
-            AdminColumn::text('description')->setLabel('Опис')->setWidth('350px'),
             AdminColumn::datetime('date')->setFormat('d.m.Y')->setLabel('Дата'),
         ]);
         return $display;

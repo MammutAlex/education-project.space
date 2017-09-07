@@ -15,7 +15,6 @@ AdminSection::registerModel(\App\Direction::class, function (ModelConfiguration 
         $display = AdminDisplay::datatables()->setColumns([
             AdminColumn::image('photo')->setLabel('Зображеня'),
             AdminColumn::link('title')->setLabel('Заголовок'),
-            AdminColumn::text('url')->setLabel('Посилання')->setWidth('350px'),
         ]);
         return $display;
     });
