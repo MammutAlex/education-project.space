@@ -4,7 +4,7 @@
     <!--page header-->
     <div class="page-breadcrumb margin-b-60">
         <div class="container">
-            <h4>Школярі</h4>
+            <h4>{{$direction->title}}</h4>
         </div>
     </div>
     <!--page header-->

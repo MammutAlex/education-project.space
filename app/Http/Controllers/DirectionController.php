@@ -18,6 +18,6 @@ class DirectionController extends Controller
         $direction = $model->where('url', $id)->firstOrFail();
         $links = $direction->links()->paginate(12);
 
-        return view('direction', ['links' => $links]);
+        return view('direction', ['links' => $links, 'direction' => $direction]);
     }
 }

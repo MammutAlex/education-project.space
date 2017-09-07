@@ -743,7 +743,6 @@ Template Header
 */
 .navbar-nav > li > a {
   font-weight: 500;
-  text-transform: capitalize;
   font-size: 15px;
   font-family: "Roboto", sans-serif;
 }
@@ -847,7 +846,6 @@ Template Header
 
 .cart-inner h4 {
   color: #555;
-  text-transform: capitalize;
 }
 
 .cart-inner hr {
@@ -967,7 +965,6 @@ Dropdown menu style
 .dropdown-menu > li > a {
   color: rgba(0, 0, 0, 0.8);
   padding: 9px 20px;
-  text-transform: capitalize;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
@@ -1028,7 +1025,6 @@ Dropdown menu style
 .mega-menu-list > li > a {
   color: rgba(0, 0, 0, 0.8);
   padding: 9px 20px;
-  text-transform: capitalize;
   font-family: "Roboto", sans-serif;
 }
 .mega-menu-list > li > a:hover, .mega-menu-list > li > a:focus {
@@ -1208,7 +1204,6 @@ Product boxes
   width: 90%;
   font-size: 16px;
   font-weight: 600;
-  text-transform: capitalize;
 }
 .product-desc h5 a {
   color: rgba(0, 0, 0, 0.5);
@@ -1249,7 +1244,6 @@ Icon boxes
 }
 .icon-box-left h4 {
   font-weight: 300;
-  text-transform: capitalize;
   margin-bottom: 5px;
 }
 .icon-box-left i {
@@ -1285,7 +1279,6 @@ Icon boxes
 }
 .topic-box h4 {
   margin-bottom: 5px;
-  text-transform: capitalize;
 }
 .topic-box i {
   margin-right: 20px;
@@ -1324,7 +1317,6 @@ Sliders
 }
 
 .title1 {
-  text-transform: capitalize;
   font-weight: 700;
   font-size: 60px;
   line-height: 70px;
@@ -1656,7 +1648,6 @@ Footer style
   z-index: 0;
 }
 .footer h4 {
-  text-transform: capitalize;
   font-weight: 500;
   margin-bottom: 20px;
   color: #fff;
@@ -1695,7 +1686,6 @@ Footer style
 }
 .latest-news .content h5 {
   font-size: 14px;
-  text-transform: capitalize;
   margin-bottom: 0px;
 }
 .latest-news .content h5 a {
@@ -1772,7 +1762,6 @@ Footer style
   color: #fff;
   position: absolute;
   top: 50%;
-  text-transform: capitalize;
   font-weight: 300;
   line-height: 24px;
   font-size: 24px;
@@ -1800,7 +1789,6 @@ Footer style
 }
 .split-section h1 {
   color: #fff;
-  text-transform: capitalize;
   font-weight: 300;
   letter-spacing: -1px;
 }
