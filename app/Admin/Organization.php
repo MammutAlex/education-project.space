@@ -14,7 +14,7 @@ AdminSection::registerModel(\App\Organization::class, function (ModelConfigurati
     $model->onDisplay(function () {
         $display = AdminDisplay::datatables()->setColumns([
             AdminColumn::link('title')->setLabel('Заголовок'),
-            AdminColumn::text('url')->setLabel('Посилання'),
+            AdminColumn::text('url')->setLabel('Посилання')->setWidth('350px'),
             AdminColumn::text('text')->setLabel('Текст'),
         ]);
         return $display;

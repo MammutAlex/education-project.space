@@ -15,7 +15,7 @@ AdminSection::registerModel(\App\Contact::class, function (ModelConfiguration $m
         $display = AdminDisplay::datatables()->setColumns([
             AdminColumn::text('name')->setLabel('Ім\'я'),
             AdminColumn::text('email')->setLabel('Email'),
-            AdminColumn::text('text')->setLabel('Текст'),
+            AdminColumn::text('text')->setLabel('Текст')->setWidth('350px'),
         ]);
         return $display;
     });
